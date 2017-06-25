@@ -17,7 +17,6 @@ const Root = () => {
           <Route path="/admin" component={Admin}/>
           <Route component={NotFound}/>
         </Switch>
-        {/*<Redirect to="/notfound"/>*/}
       </div>
     </BrowserRouter>
   )

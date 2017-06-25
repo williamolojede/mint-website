@@ -1,7 +1,7 @@
 import React from 'react';
 
 import firebase from 'firebase';
-import { fireAuth, fireDb } from '../../base';
+import { fireAuth } from '../../base';
 
 class Admin extends React.Component{
   constructor() {

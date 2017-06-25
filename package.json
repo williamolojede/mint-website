@@ -1,6 +1,7 @@
 {
   "name": "mint-website",
   "version": "0.1.0",
+  "homepage": "http://mint-website.surge.sh/",
   "private": true,
   "dependencies": {
     "firebase": "^4.1.2",
@@ -9,12 +10,18 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
+    "git-scripts": "^0.2.1",
     "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "createCNAME": "echo mint-website.surge.sh > ./build/CNAME",
+    "create200": "cp ./build/index.html ./build/200.html",
+    "predeploy": "npm run build && npm run createCNAME && npm run create200",
+    "deploy": "surge ./build",
+    "pre-push": "npm run deploy"
   }
 }
