@@ -26,6 +26,6 @@
     "createCNAME": "echo mint-website.surge.sh > ./build/CNAME",
     "create200": "cp ./build/index.html ./build/200.html",
     "predeploy": "npm run build && npm run createCNAME && npm run create200",
-    "deploy": "surge ./build",
+    "deploy": "surge ./build"
   }
 }
